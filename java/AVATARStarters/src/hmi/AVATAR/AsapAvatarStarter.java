@@ -43,10 +43,12 @@ public class AsapAvatarStarter
     public ArrayList<Environment> environments;
     String spec;
     String mode;
+    String lang;
     
-    public AsapAvatarStarter(String mode)
+    public AsapAvatarStarter(String mode, String lang)
     {
     	this.mode = mode;
+    	this.lang = lang;
     	this.status = Status.STARTING;
     }
 
@@ -144,7 +146,7 @@ public class AsapAvatarStarter
     }
     
     public void Init(String scenario) {
-    	this.spec = "clevr/agentspec_"+mode+"_"+scenario+".xml";
+    	this.spec = "clevr/agentspec_"+mode+"_"+scenario+"_"+lang+".xml";
 		System.out.println("\tUsing spec "+spec);
     	try {
 	    	if (mode.equals("nogui")) {
@@ -161,32 +163,26 @@ public class AsapAvatarStarter
     public static void main(String[] args) throws IOException
     {
     	Console.setEnabled(false);
-    	System.out.println("Args: ");
+    	System.out.println("Args: (using first argument for \"mode\" and second for \"lang\")");
     	for (int a = 0; a<args.length; a++) {
     		System.out.println("\tArg "+a+": "+args[a]);
     	}
     	
     	String mode = "gui";
+    	String lang = "NL";
         
     	if (args.length > 0) {
     		mode = args[0];
-    	}
+    	} if (args.length > 1) {
+			lang = args[1];
+		}
     	
-    	AsapAvatar aa = new AsapAvatar(mode);
+    	System.out.println("Starting with: ");
+    	System.out.println("\tmode: "+mode);
+    	System.out.println("\tlang: "+lang);
+    	AsapAvatarStarter aa = new AsapAvatarStarter(mode, lang);
     	AvatarStatusThread ast = new AvatarStatusThread(aa);
     	ast.start();
-    	
-    	/*
-    	if (mode.equals("nogui")) {
-        	aa.InitNoGui();
-    	} else {
-        	aa.InitGui();
-    	}*/
-    	/*
-    	while (ast.) {
-    		/// handle restart, stop, etc...
-    	}*/
-    	
     }
 
     private static JComponentEnvironment setupJComponentEnvironment()

@@ -16,7 +16,7 @@
             <parameterdefault name="filename" value="pointAt.json"/>
             <parameterdefault name="resource" value="clevr/gestures/templates"/>
             <parameterdefault name="vhId" value="CleVR"/>
-            <parameterdefault name="duration" value="3.0"/>
+            <parameterdefault name="duration" value="4.0"/>
         </parameterdefaults>
         <MiddlewareUnit type="SendJsonTemplateMessageMU"/>
     </MiddlewareUnitSpec>
@@ -37,7 +37,7 @@
             <parameterdefault name="filename" value="lookAt.json"/>
             <parameterdefault name="resource" value="clevr/gestures/templates"/>
             <parameterdefault name="vhId" value="CleVR"/>
-            <parameterdefault name="duration" value="3.0"/>
+            <parameterdefault name="duration" value="4.0"/>
         </parameterdefaults>
         <MiddlewareUnit type="SendJsonTemplateMessageMU"/>
     </MiddlewareUnitSpec>  

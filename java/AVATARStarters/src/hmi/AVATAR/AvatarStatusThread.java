@@ -4,9 +4,12 @@ import static nl.utwente.hmi.middleware.helpers.JsonNodeBuilders.object;
 import hmi.unityembodiments.*;
 import com.fasterxml.jackson.databind.JsonNode;
 
+import lombok.extern.slf4j.Slf4j;
+
 import nl.utwente.hmi.middleware.MiddlewareListener;
 import nl.utwente.hmi.middleware.stomp.STOMPMiddleware;
 
+@Slf4j
 public class AvatarStatusThread extends Thread implements MiddlewareListener {
 
 	public enum Status {
@@ -27,9 +30,9 @@ public class AvatarStatusThread extends Thread implements MiddlewareListener {
 	}
 	
 	public boolean running;
-	AsapAvatar aa;
+	AsapAvatarStarter aa;
 	
-	public AvatarStatusThread(AsapAvatar aa) {
+	public AvatarStatusThread(AsapAvatarStarter aa) {
 		this.aa = aa;
 		this.running = true;
 	}

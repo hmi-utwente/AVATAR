@@ -141,7 +141,7 @@
 		</parametermap>
 		<parameterdefaults>
 			<parameterdefault name="intensity" value="1"/> <!-- TODO -->
-			<parameterdefault name="targetname" value="default"/> <!-- TODO -->	
+			<parameterdefault name="targetname" value="Furrow"/> <!-- TODO -->	
 		</parameterdefaults>
 		<FaceUnit type="Morph"/>
 	</FaceUnitSpec>
