@@ -1,7 +1,7 @@
 <!--
-Ant file for  QA Matcher application.
-code: Rieks op den Akker
-date: April 2015
+Ant file for  Wizard of Oz for AVATAR application.
+code: Merijn Bruijnes
+date: Feb 2017
 
 Description of the targets.
 
@@ -16,7 +16,7 @@ run
   
 
 doc
-	Generate Javadoc in doc/qamatcher.
+	Generate Javadoc 
 -->
 <project name="AvatarPolitieWoz" default="run" basedir=".">	
 	<property name="src" location="src" />

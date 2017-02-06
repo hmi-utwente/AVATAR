@@ -1,4 +1,8 @@
 package AvatarPolitieWoz;
+/*
+Code: Merijn Bruijnes
+Date: Feb 2017
+*/
 
 import java.awt.Dimension;
 import java.awt.EventQueue;

@@ -1,4 +1,8 @@
 package AvatarPolitieWoz;
+/*
+Code: Merijn Bruijnes
+Date: Feb 2017
+*/
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,6 +24,7 @@ import java.awt.Dimension;
 
 import javax.swing.BoxLayout;
 import java.awt.Component;
+
 
 
 @SuppressWarnings("serial")
@@ -192,97 +197,122 @@ public class OutputGui extends JFrame {
 		}		
 		
 		
-		final JButton btnIntro = new JButton("Intro: U heeft wat gezien?");	
+		//final JButton btnIntro = new JButton("Intro: U heeft wat gezien?");	
+		final JButton btnIntro = new JButton("Intro: You saw something?");	
 		btnIntro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {					
-				String intro = "Goedemiddag, ik begreep dat u getuige bent geweest van een poging tot inbraak. Kunt u vertellen wat u heeft gezien?";
+				//String intro = "Goedemiddag, ik begreep dat u getuige bent geweest van een poging tot inbraak. Kunt u vertellen wat u heeft gezien?";
+				String intro = "Good day, I understood that you witnessed an attempted break in. Could you please tell me what you saw?";
 				sayThis(intro,"smile");
 			}
 		});
 		
-		final JButton btnQ1 = new JButton("Verdachte personen beschrijven");	
+		//final JButton btnQ1 = new JButton("Verdachte personen beschrijven");	
+		final JButton btnQ1 = new JButton("Describe suspects");	
 		btnQ1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {				
-				String q1 = "U noemde een aantal verdachte personen, kunt u deze nog wat meer beschrijven?";
+				//String q1 = "U noemde een aantal verdachte personen, kunt u deze nog wat meer beschrijven?";
+				String q1 = "You mentioned some suspicious persons, could you describe them some more?";
 				sayThis(q1,"deictic_you");
 			}
 		});
 		
-		final JButton btnQ2 = new JButton("Auto beschrijven");	
+		//final JButton btnQ2 = new JButton("Auto beschrijven");	
+		final JButton btnQ2 = new JButton("Describe car");	
 		btnQ2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {				
-				String q2 = "En die auto waar ze wat probeerden, kunt u daar nog iets meer over zeggen?";
+				//String q2 = "En die auto waar ze wat probeerden, kunt u daar nog iets meer over zeggen?";
+				String q2 = "And the car where they tried something, could you say something more about it?";
 				sayThis(q2,"smile");
 			}
 		});
 		
-		final JButton btnQ3 = new JButton("Parkeerplaats beschrijven");	
+		//final JButton btnQ3 = new JButton("Parkeerplaats beschrijven");	
+		final JButton btnQ3 = new JButton("Describe parking lot");	
 		btnQ3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {				
-				String q3 = "En de parkeerplaats? Is u daar iets opgevallen, iets wat ik nog zou moeten noteren?";
+				//String q3 = "En de parkeerplaats? Is u daar iets opgevallen, iets wat ik nog zou moeten noteren?";
+				String q3 = "And the parking lot? Did you notice anything there, something that I should note down?";
 				sayThis(q3,"why");
 			}
 		});
 		
-		final JButton btnQ4 = new JButton("Andere getuigen beschrijven");	
+		//final JButton btnQ4 = new JButton("Andere getuigen beschrijven");	
+		final JButton btnQ4 = new JButton("Describe other witnesses");	
 		btnQ4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {				
-				String q4 = "Ok, ik zou graag nog iets meer informatie krijgen over andere getuigen. Die hebben misschien nog meer informatie. Kunt u zich daar nog iets van herinneren?";
+				//String q4 = "Ok, ik zou graag nog iets meer informatie krijgen over andere getuigen. Die hebben misschien nog meer informatie. Kunt u zich daar nog iets van herinneren?";
+				String q4 = "I would like some more information about other witnesses. Perhaps they have some more information for me. Can you remember any other witnesses?";
 				sayThis(q4,"NOD");
 			}
 		});
 		
-		final JButton btnQ5 = new JButton("Eigenaren beschrijven");	
+		//final JButton btnQ5 = new JButton("Eigenaren beschrijven");	
+		final JButton btnQ5 = new JButton("Describe owners");	
 		btnQ5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {				
-				String q5 = "Wat weet u zich nog te herinneren van de eigenaren?";
+				//String q5 = "Wat weet u zich nog te herinneren van de eigenaren?";
+				String q5 = "What do you remember of the owners?";
 				sayThis(q5,"pointCar");
 			}
 		});
 		
-		final JButton btnQ6 = new JButton("Wat deden verdachten?");	
+		//final JButton btnQ6 = new JButton("Wat deden verdachten?");	
+		final JButton btnQ6 = new JButton("What did the suspects do");	
 		btnQ6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {	
-				String q6 = "Wat deden die verdachte personen precies?";
+				//String q6 = "Wat deden die verdachte personen precies?";
+				String q6 = "What did the suspects do exactly?";
 				sayThis(q6,"gazeCar");
 			}
 		});
 		
-		final JButton btnQ7 = new JButton("Waar kwamen verdachten vandaan");	
+		//final JButton btnQ7 = new JButton("Waar kwamen verdachten vandaan");	
+		final JButton btnQ7 = new JButton("Where suspects came from");	
 		btnQ7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {			
-				String q7 = "Van welke kant kwamen die verdachten eigenlijk aanlopen?";
+				//String q7 = "Van welke kant kwamen die verdachten eigenlijk aanlopen?";
+				String q7 = "From which side did the suspects come?";
 				sayThis(q7,"indicateright");
 			}
 		});
 		
-		final JButton btnQ8 = new JButton("Waar gingen verdachten heen");	
-		btnQ8.addActionListener(new ActionListener() {
+		//final JButton btnQ8 = new JButton("Waar gingen verdachten heen");	
+		final JButton btnQ8 = new JButton("Where suspects went");	
+		btnQ8.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent arg0) {	
-				String q8 = "En waar gingen de verdachten heen?";
+				//String q8 = "En waar gingen de verdachten heen?";
+				String q8 = "And where did the suspects go?";
 				sayThis(q8,"indicateleft");
 			}
 		});
-		final JButton btnQ9 = new JButton("Waar stond u?");	
+		
+		//final JButton btnQ9 = new JButton("Waar stond u?");	
+		final JButton btnQ9 = new JButton("Where were you");	
 		btnQ9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {	
-				String q9 = "Waar stond u ongeveer en stond u daar de hele tijd, of?";
+				//String q9 = "Waar stond u ongeveer en stond u daar de hele tijd, of?";
+				String q9 = "Whereabout were you standing and were you standing there all the time, or?";
 				sayThis(q9,"deictic_you");
 			}
 		});
 		
-		final JButton btnQ10 = new JButton("Heeft u nog meer info");	
+		//final JButton btnQ10 = new JButton("Heeft u nog meer info");	
+		final JButton btnQ10 = new JButton("More info?");	
 		btnQ10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
-				String q10 = "Heel mooi, ik heb denk ik een aardig beeld van wat er gebeurd is. Heeft u nog verdere dingen die u graag zou willen noemen?";
+				//String q10 = "Heel mooi, ik heb denk ik een aardig beeld van wat er gebeurd is. Heeft u nog verdere dingen die u graag zou willen noemen?";
+				String q10 = "Very nice, I think I have a good idea about what happenened. Do you have other things you would like to mention?";
 				sayThis(q10,"NOD");
 			}
 		});
 		
-		final JButton btnClose = new JButton("Afsluiting.");	
+		//final JButton btnClose = new JButton("Afsluiting.");	
+		final JButton btnClose = new JButton("Closing.");	
 		btnClose.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
-				String close = "Goed, dank u voor uw medewerking. Mocht u later nog wat te binnen schieten, dan kunt u altijd even met de wijkagent bellen. Dank u wel, en tot ziens.";
+				//String close = "Goed, dank u voor uw medewerking. Mocht u later nog wat te binnen schieten, dan kunt u altijd even met de wijkagent bellen. Dank u wel, en tot ziens.";
+				String close = "Alright, thank you for your cooperation. If you think of anything else later, please feel free to contact your local police officer. Thank you, and good bye.";
 				sayThis(close,"NOD");
 			}
 		});
@@ -298,31 +328,31 @@ public class OutputGui extends JFrame {
 				}else if (r == 1){
 					sayThis("Ah, OK.","smile");
 				}else {
-					sayThis("Ja OK.","NOD");
+					sayThis("OK.","smile");
 				}
 			}
 		});
 		
-		final JButton btnJa = new JButton("Ja");
+		final JButton btnJa = new JButton("Yes");
 		btnJa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {	
 				int r = random.nextInt(2);
 				if (r == 0 ){
-					sayThis("Ja.","NOD");
+					sayThis("Yes.","NOD");
 				}else if (r == 1){
-					sayThis("Jaja.","NOD");
+					sayThis("Yes.","smile");
 				}
 			}
 		});
 		
-		final JButton btnNee = new JButton("Nee");
+		final JButton btnNee = new JButton("No");
 		btnNee.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {				
 				int r = random.nextInt(2);
 				if (r == 0 ){
-					sayThis("Nee.","SHAKE");
+					sayThis("No.","SHAKE");
 				}else{
-					sayThis("Nee.","sad");
+					sayThis("No.","sad");
 				}
 			}
 		});
@@ -339,86 +369,91 @@ public class OutputGui extends JFrame {
 			}
 		});
 		
-		final JButton btnNou = new JButton("Nou");
+		final JButton btnNou = new JButton("Well...");
 		btnNou.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {				
 				int r = random.nextInt(2);
 				if (r == 0 ){
-					sayThis("Nou.","why");
+					sayThis("Well...","why");
 				}else{
-					sayThis("Nou.","offer");
+					sayThis("Well...","offer");
 				}
 			}
 		});
 		
-		final JButton btnMooi = new JButton("Mooi");
+		final JButton btnMooi = new JButton("Good");
 		btnMooi.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {				
-				sayThis("Mooi.","NOD");
+			public void actionPerformed(ActionEvent arg0) {	
+				int r = random.nextInt(2);	
+				if (r == 0 ){
+					sayThis("Good.","NOD");
+				}else{
+					sayThis("Good.","smile");
+				}
 			}
 		});
 		
 //buttons for evade questions pane
-		final JButton btnEvade1 = new JButton("Wat u wilt");
+		final JButton btnEvade1 = new JButton("What you want");
 		btnEvade1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {	
-				sayThis("Wat u wilt.","stop");
+				sayThis("What you want.","stop");
 			}
 		});
 		
-		final JButton btnEvade2 = new JButton("Dat moet u zelf weten");
+		final JButton btnEvade2 = new JButton("Up to you");
 		btnEvade2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {	
-				sayThis("Dat moet u zelf weten.","BEAT_LOW");
+				sayThis("That is up to you.","BEAT_LOW");
 			}
 		});
 		
-		final JButton btnEvade3 = new JButton("Ga gerust verder");
+		final JButton btnEvade3 = new JButton("Please continue");
 		btnEvade3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {				
-				sayThis("Gaat u gerust verder.","offer");
+				sayThis("Please continue.","offer");
 			}
 		});
 		
-		final JButton btnALLEvade4 = new JButton("Geen idee eigenlijk");
+		final JButton btnALLEvade4 = new JButton("I'm not sure");
 		btnALLEvade4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {	
-				sayThis("Geen idee eigenlijk.","contemplate");
+				sayThis("Actually, I'm not sure.","contemplate");
 			}
 		});
 		
-		final JButton btnEvade5 = new JButton("Niet van belang denk ik");
+		final JButton btnEvade5 = new JButton("Not important");
 		btnEvade5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
-				sayThis("Dat is niet van belang denk ik.","deictic_self");
+				sayThis("That isn't really important, I think.","deictic_self");
 			}
 		});
 		
-		final JButton btnEvade6 = new JButton("En toen?");
+		final JButton btnEvade6 = new JButton("And then?");
 		btnEvade6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
-				sayThis("En toen?","ask");
+				sayThis("And then?","ask");
 			}
 		});
 		
-		final JButton btnEvade7 = new JButton("En daarna?");
+		final JButton btnEvade7 = new JButton("After that?");
 		btnEvade7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
-				sayThis("En daarna?","ask");
+				sayThis("And after than?","ask");
 			}
 		});
 		
-		final JButton btnEvade8 = new JButton("En verder?");
+		final JButton btnEvade8 = new JButton("What else?");
 		btnEvade8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
-				sayThis("En verder?","ask");
+				sayThis("And what else?","ask");
 			}
 		});
 		
-		final JButton btnEvade9 = new JButton("Weet u nog meer?");
+		final JButton btnEvade9 = new JButton("Do you know more?");
 		btnEvade9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
-				sayThis("Weet u nog meer?","deictic_you");
+				sayThis("Do you know more?","deictic_you");
 			}
 		});
 		
@@ -427,13 +462,13 @@ public class OutputGui extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {		
 				int r = random.nextInt(4);
 				if (r == 0 ){
-					sayThis("Hoorde ik iemand iets over taart zeggen? Ik heb best trek!","deictic_self");
+					sayThis("Did I hear someone mention cake? I'm actually hungry!","deictic_self");
 				}else if (r == 1 ) {
 					sayThis("I am trying to sell fine leather jackets.","deictic_self");
 				}else if (r == 2 ){
-					sayThis("Wat heeft u een leuk pak aan.","joy");
+					sayThis("I'd like to complement you on your nice outfit.","joy");
 				}else{
-					sayThis("1, 2, 3. Ik ben AVATAR, en ik ga je leren dansen.","dans");
+					sayThis("1, 2, 3. I'm AVATAR and I'm gonna teach you how to dance.","dans");
 				}
 				
 			}
@@ -505,11 +540,11 @@ public class OutputGui extends JFrame {
 		contentPane.setBounds(200, 500, 2000, 1000);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		final JLabel lbl = new JLabel("Politie: ");
-		final JLabel lblInterviewQ = new JLabel("Vragen: ");
+		final JLabel lbl = new JLabel("Police: ");
+		final JLabel lblInterviewQ = new JLabel("Questions: ");
 		final JLabel lblRemarks = new JLabel("Feedback: ");
-		final JLabel lblEvadeQs = new JLabel ("Ontwijkgedrag: ");
-		final JLabel lblOpenSpeech = new JLabel("Voer text in:   ");
+		final JLabel lblEvadeQs = new JLabel ("Evasive: ");
+		final JLabel lblOpenSpeech = new JLabel("Enter text:   ");
 		
 		openSpeechPane = new JPanel();
 		openSpeechPane.setLayout(new BoxLayout(openSpeechPane, BoxLayout.Y_AXIS));
