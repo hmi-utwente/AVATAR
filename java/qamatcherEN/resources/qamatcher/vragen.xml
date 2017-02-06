@@ -1,5 +1,26 @@
-﻿<qa_root>
+<qa_root>
 <dialog id="0001">
+<answerlist>
+<answer type="certain">
+Hi
+</answer>
+<answer type="certain">
+Hello
+</answer>
+</answerlist>
+<questionlist>
+<question>
+Hello
+</question>
+<question>
+Hi
+</question>
+<question>
+Hey
+</question>
+</questionlist>
+</dialog>
+<dialog id="0064">
 <answerlist>
 <answer type="uncertain">
 The weather is quite nice, as you can see.
@@ -65,6 +86,9 @@ Can you tell me a story?
 </question>
 <question>
 Can you tell me something?
+</question>
+<question>
+What can you tell me?
 </question>
 <question>
 Tell me something please
@@ -182,9 +206,6 @@ What does that bottle do?
 </question>
 <question>
 Tell me about that drink me bottle
-</question>
-<question>
-what can you tell me about the bottle?
 </question>
 <question>
 What is in the bottle?
