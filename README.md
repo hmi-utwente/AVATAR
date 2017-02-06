@@ -9,6 +9,8 @@ to get external modules (currently the hmibuild system).
 
 ## Components
 
+Required middleware: Stomp ActiveMQ
+
 ### ASAPRealizer
 Compile & run the starter by runnig these commands in ./java/AVATARStarters/:
 
