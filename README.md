@@ -11,6 +11,9 @@ to get external modules (currently the hmibuild system).
 
 Required middleware: Stomp ActiveMQ
 
+NL speech TTS by Fluency (www.fluency.nl)
+EN speech TTS by MaryTTS (included with ASAP)
+
 ### ASAPRealizer
 Compile & run the starter by runnig these commands in ./java/AVATARStarters/:
 
