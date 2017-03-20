@@ -24,13 +24,16 @@ ant main (select AsapAvatarStarter class)
 ant run
 
 ### Agent Binaries
-TODO
+Contact Rieks or Merijn for a copy.
+Place in \binary
+(run \binary\World\CleVR.PoP.Unity.exe)
 
 ### ASR
-TODO
+In folder \java\Spraak
 
 ### QAMatcher
-TODO
+ActiveMQ QAMatcher: \java\qamatcher\testResponder.bat
+The QA template: \java\qamatcherNL\resources\qamatcher\vragen.xml
 
 ### WoZ Panel
-TODO
+In \java\AvatarPolitieWoz
