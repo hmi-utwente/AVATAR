@@ -1,5 +1,6 @@
 package qamatcher;
 import java.util.*;
+import java.io.*;
 
 /**
  * DialogStore is a store containing Dialog elements  
@@ -24,9 +25,34 @@ String attvalue="";
 
 List<Dialog> dialogs;
 private static final String DEFAULT_ANSWER = "I do not understand what you mean.";
+ArrayList<String> defaultAnswers = new ArrayList<String>();
 
 public DialogStore(){
 	dialogs = new ArrayList<Dialog>();
+	
+	try {
+	    BufferedReader br = new BufferedReader(new FileReader("../resources/qamatcher/defaultanswers.txt"));
+		String line;
+	    while ((line = br.readLine()) != null) {
+		   defaultAnswers.add(line);
+		   System.out.println("in while");
+	    }
+	} catch (FileNotFoundException e) {
+		System.out.println("file not found");
+	} catch (IOException e){
+		System.out.println("IOexception");
+	}
+	//defaultAnswers.add("Huh?");
+	//defaultAnswers.add("What?");
+	System.out.println(Arrays.toString(defaultAnswers.toArray()));
+}
+
+//get a random default answer from the list of default answers
+public String RandomDefaultAnswer(){
+	if (defaultAnswers.size() == 0){
+		return  DEFAULT_ANSWER;
+	}
+	return defaultAnswers.get((int)(Math.random() * (defaultAnswers.size())));
 }
 
 public void add(Dialog d){ dialogs.add(d);
@@ -65,7 +91,7 @@ public String answerString(Dialog d, String attName, String attValue){
 		if ((value!=null) && (value.equals(attValue)))
 			return at.answer;
 	}
-	return DEFAULT_ANSWER;
+	return RandomDefaultAnswer();//DEFAULT_ANSWER;
 }
 
 /**
@@ -89,7 +115,7 @@ public String bestMatch(String question, String attName, String attValue){
 	        // Here we look at the attribute value !
 		answer = answerString(d, attName , attValue );
 	}else{
-		answer = DEFAULT_ANSWER;
+		answer = RandomDefaultAnswer();//DEFAULT_ANSWER;
 	}
 	return answer;
 }
@@ -99,7 +125,7 @@ public String bestMatch(String question, String attName, String attValue){
  */
 public Dialog getBestMatchingDialog(String query){
 	Dialog bestDialog = null;
-	double bestMatch = -0.1;
+	double bestMatch = -0.1;//-0.1;
 	for(int i=0;i<dialogs.size();i++){
 		Dialog d = dialogs.get(i);
 		for(int j=0;j<d.questionSize();j++){
@@ -111,6 +137,8 @@ public Dialog getBestMatchingDialog(String query){
 			}
 		}
 	}
+	if (bestMatch == 0)
+	{return null;}
 	return bestDialog;
 }
 
